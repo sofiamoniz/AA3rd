@@ -49,10 +49,15 @@ class Exact_counter:
         Write in file the top 20 chars
         """
         high = self.get_top_20_chars()
+        headers = ["Char", "Couting"]
+        rows=[]
         with open(output_file,"w") as output:
-            output.write("--- Top 20 chars - exact counter:  " )
+            output.write("--- Top 20 chars - exact counter:  \n\n" )
             for i in high:
-                output.write("\n"+str(i[0])+" -> "+str(i[1]))
+                #output.write("\n"+str(i[0])+" -> "+str(i[1]))
+                rows.append([i[0],i[1]])
+            output.write(tabulate(rows,headers=headers))
+
 
     def get_final_counting(self):
         """

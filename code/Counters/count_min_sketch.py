@@ -18,6 +18,7 @@ import hashlib
 import math
 from Reader.File_reader import File_reader
 from collections import Counter 
+import sys
 
 
 class CountMinSketch(object):
@@ -59,7 +60,7 @@ class CountMinSketch(object):
         else:
             raise ValueError( "You must either supply both m and d or delta and epsilon.")
 
-        print("CM Sketch with " + str(self.m) + " columns and " + str(self.d) + " rows")
+        #print("CM Sketch with " + str(self.m) + " columns and " + str(self.d) + " rows")
 
         self.n = 0
 
@@ -96,7 +97,10 @@ class CountMinSketch(object):
             for i in range(self.d):
                 dsaEncryption.update(str(i).encode("utf-8"))              # concatenate
                 yield int(dsaEncryption.hexdigest(), 16) % self.m
-
+        else:
+            print("INVALID HASH FUNCTION "+hash_func+" !")
+            print("Please use ['md5', 'sha256', 'sha1', 'blake2s', 'dsaEncryption']")
+            sys.exit()
 
     def update(self, x, value=1, hash='md5'):
         """
@@ -142,7 +146,6 @@ class CountMinSketch(object):
             self.update(w, hash=hash_function)
         
         for char, counting in exact_counter_result.items():
-            #print(char,"->",min_sketch.query(char))
             self.char_counting_dict[char] = self.query(char)
         
         self.char_counting_dict = {k: v for k, v in sorted(self.char_counting_dict.items(), key=lambda item: item[1], reverse=True)}
