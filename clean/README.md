@@ -2,7 +2,7 @@
     Assignment 3: Algoritmos Probabilísticos: Contagem dos Itens Mais Frequentes – Ficheiros de Texto de Obras Literárias, com Count-Min Sketch
     Author: Ana Sofia Medeiros de Castro Moniz Fernandes, 88739
 
-**The developed code allows to count the chars present in text files by using "The Count Min-Sketch", by using five different hash functions**
+**The developed code allows to count the chars present in text files by using "The Count Min-Sketch", by using five different hash functions. Note that the programm may take a bit long to execute once it will run for each hash function.**
 
 ### Requirements:
 	
