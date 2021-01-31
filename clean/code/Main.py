@@ -10,16 +10,16 @@ import time
 def main():
     
     if len(sys.argv)<2:
-        print ("Usage:\n  Main.py <text file>")
-        print ("\nExample:\n  Main.py eng_hamlet.txt")
+        print ("Usage:\n  python3 Main.py <text file>")
+        print ("\nExample:\n  python3 Main.py eng_hamlet.txt")
         print("\nText file must be inside 'TextFiles' folder!")
         sys.exit()
 
     file_to_read = "TextFiles/"+sys.argv[1]
 
     if(path.exists(file_to_read) == False):
-        print ("Usage:\n  Main.py <text file>")
-        print ("\nExample:\n  Main.py eng_hamlet.txt")
+        print ("Usage:\n  python3 Main.py <text file>")
+        print ("\nExample:\n  python3 Main.py eng_hamlet.txt")
         print("\nText file must be inside 'TextFiles' folder!")
         sys.exit()
 
