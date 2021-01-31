@@ -1,8 +1,8 @@
-    AA, January 2021
-    Assignment 2: Algoritmos Probabilísticos
+    AA, February 2021
+    Assignment 3: Algoritmos Probabilísticos: Contagem dos Itens Mais Frequentes – Ficheiros de Texto de Obras Literárias, com Count-Min Sketch
     Author: Ana Sofia Medeiros de Castro Moniz Fernandes, 88739
 
-**The developed code allows to count the words present in text files by using three different counters - exact counter, fixed probability 1/2 counter and log base 2 counter**
+**The developed code allows to count the chars present in text files by using "The Count Min-Sketch", by using five different hash functions**
 
 ### Requirements:
 	
@@ -10,16 +10,18 @@
 
 ### To run the program (inside folder "code"):
 
-    There are four possible scripts:
-		1. python3 RepeatingExperience.py
-		2. python3 ExampleENG.py
-		3. python3 ExampleFR.py
-		4. python3 ExamplePT.py
+    Use the command:
+		python3 Main.py <textfile>
 
+
+    Usage example:
+		python3 Main.py eng_hamlet.txt
 ### Note:
 
 -**The code is located on folder "code"**
 
+-**The used textfiles must be inside directory "code/TextFiles"**
+
 -**The pdf report can be found on folder "report"**
 
--**The tables presented in the report can be found on folder "report/tables" - see this in case the tables are not perceptible in the report**
+-**The results presented in the report can be found on folder "report/results" - see this in case the tables are not perceptible in the report**
